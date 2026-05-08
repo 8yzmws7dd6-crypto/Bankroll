@@ -1,5 +1,5 @@
-
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -8,326 +8,336 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap');
 
-  :root {
-    --green: #00a651;
-    --dark-green: #007a3d;
-    --light-green: #00c060;
-    --black: #141414;
-    --dark: #1e1e1e;
-    --card: #272727;
-    --border: #383838;
-    --text: #f0f0f0;
-    --muted: #777;
-    --red: #e03535;
-    --yellow: #f5c000;
-  }
+:root {
+–green: #00a651;
+–dark-green: #007a3d;
+–light-green: #00c060;
+–black: #141414;
+–dark: #1e1e1e;
+–card: #272727;
+–border: #383838;
+–text: #f0f0f0;
+–muted: #777;
+–red: #e03535;
+–yellow: #f5c000;
+}
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--black); color: var(--text); font-family: 'Roboto', sans-serif; min-height: 100vh; }
+- { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(–black); color: var(–text); font-family: ‘Roboto’, sans-serif; min-height: 100vh; }
 
-  /* HEADER */
-  .header {
-    background: var(--dark);
-    border-bottom: 3px solid var(--green);
-    padding: 20px 24px;
-    text-align: center;
-    position: relative;
-  }
-  .header-bk {
-    position: absolute;
-    right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: right;
-  }
-  .logo-wrap {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  }
-  .logo-icon {
-    font-size: 48px;
-    line-height: 1;
-    color: var(--green);
-    text-shadow: 0 0 20px rgba(0,166,81,0.4);
-  }
-  .logo-title {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--text);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  .header-bk .amount {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 28px;
-    font-weight: 700;
-  }
-  .header-bk .delta {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    margin-top: 2px;
-  }
-  .green  { color: var(--green); }
-  .red    { color: var(--red); }
-  .yellow { color: var(--yellow); }
-  .muted  { color: var(--muted); }
+/* HEADER */
+.header {
+background: var(–dark);
+border-bottom: 3px solid var(–green);
+padding: 20px 24px;
+text-align: center;
+position: relative;
+}
+.header-bk {
+position: absolute;
+right: 24px;
+top: 50%;
+transform: translateY(-50%);
+text-align: right;
+}
+.logo-wrap {
+display: inline-flex;
+flex-direction: column;
+align-items: center;
+gap: 4px;
+}
+.logo-icon {
+font-size: 48px;
+line-height: 1;
+color: var(–green);
+text-shadow: 0 0 20px rgba(0,166,81,0.4);
+}
+.logo-title {
+font-size: 22px;
+font-weight: 700;
+color: var(–text);
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+.header-bk .amount {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 28px;
+font-weight: 700;
+}
+.header-bk .delta {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 12px;
+margin-top: 2px;
+}
+.green  { color: var(–green); }
+.red    { color: var(–red); }
+.yellow { color: var(–yellow); }
+.muted  { color: var(–muted); }
 
-  /* MONTH NAV */
-  .month-nav {
-    background: var(--dark);
-    border-bottom: 1px solid var(--border);
-    padding: 0 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    height: 48px;
-  }
-  .month-btn {
-    background: none; border: none;
-    color: var(--muted); cursor: pointer;
-    font-size: 20px; padding: 4px 10px;
-    transition: color 0.2s;
-  }
-  .month-btn:hover { color: var(--green); }
-  .month-label {
-    font-size: 20px; font-weight: 700;
-    color: var(--text); min-width: 150px;
-    text-align: center;
-    letter-spacing: 1px;
-  }
+/* MONTH NAV */
+.month-nav {
+background: var(–dark);
+border-bottom: 1px solid var(–border);
+padding: 0 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 16px;
+height: 48px;
+}
+.month-btn {
+background: none; border: none;
+color: var(–muted); cursor: pointer;
+font-size: 20px; padding: 4px 10px;
+transition: color 0.2s;
+}
+.month-btn:hover { color: var(–green); }
+.month-label {
+font-size: 20px; font-weight: 700;
+color: var(–text); min-width: 150px;
+text-align: center;
+letter-spacing: 1px;
+}
 
-  /* TABS */
-  .tabs {
-    background: var(--dark);
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    padding: 0 24px;
-    justify-content: center;
-  }
-  .tab {
-    background: none; border: none;
-    border-bottom: 3px solid transparent;
-    padding: 14px 20px; cursor: pointer;
-    color: var(--muted); font-size: 13px;
-    font-weight: 500; font-family: 'Roboto', sans-serif;
-    text-transform: uppercase; letter-spacing: 1px;
-    transition: all 0.2s;
-  }
-  .tab.active { color: var(--green); border-bottom-color: var(--green); }
-  .tab:hover  { color: var(--text); }
+/* TABS */
+.tabs {
+background: var(–dark);
+border-bottom: 1px solid var(–border);
+display: flex;
+padding: 0 24px;
+justify-content: center;
+}
+.tab {
+background: none; border: none;
+border-bottom: 3px solid transparent;
+padding: 14px 20px; cursor: pointer;
+color: var(–muted); font-size: 13px;
+font-weight: 500; font-family: ‘Roboto’, sans-serif;
+text-transform: uppercase; letter-spacing: 1px;
+transition: all 0.2s;
+}
+.tab.active { color: var(–green); border-bottom-color: var(–green); }
+.tab:hover  { color: var(–text); }
 
-  /* CONTENT */
-  .content { max-width: 900px; margin: 0 auto; padding: 24px; }
-  .panel { display: none; } .panel.active { display: block; }
+/* CONTENT */
+.content { max-width: 900px; margin: 0 auto; padding: 24px; }
+.panel { display: none; } .panel.active { display: block; }
 
-  /* CARDS */
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 16px;
-  }
-  .card-title {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
-  }
+/* CARDS */
+.card {
+background: var(–card);
+border: 1px solid var(–border);
+border-radius: 8px;
+padding: 20px;
+margin-bottom: 16px;
+}
+.card-title {
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 2px;
+color: #fff;
+text-transform: uppercase;
+margin-bottom: 16px;
+padding-bottom: 10px;
+border-bottom: 1px solid var(–border);
+}
 
-  /* STATS GRID */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    margin-bottom: 16px;
-  }
-  .stat-box {
-    background: var(--dark);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 16px 12px;
-    text-align: center;
-  }
-  .stat-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-  .stat-value {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 20px;
-    font-weight: 700;
-  }
+/* STATS GRID */
+.stats-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 12px;
+margin-bottom: 16px;
+}
+.stat-box {
+background: var(–dark);
+border: 1px solid var(–border);
+border-radius: 6px;
+padding: 16px 12px;
+text-align: center;
+}
+.stat-label {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1px;
+color: #fff;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+.stat-value {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 20px;
+font-weight: 700;
+}
 
-  /* PROGRESS */
-  .progress-row { margin-bottom: 20px; }
-  .progress-header {
-    display: flex; justify-content: space-between;
-    margin-bottom: 8px; align-items: center;
-  }
-  .prog-label {
-    font-size: 12px; font-weight: 700;
-    color: #fff; text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  .prog-value {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 14px; color: var(--yellow); font-weight: 700;
-  }
-  .progress-bar {
-    background: #111; border-radius: 6px;
-    height: 12px; overflow: hidden;
-    border: 1px solid var(--border);
-  }
-  .progress-fill { height: 100%; border-radius: 6px; transition: width 0.5s ease; }
-  .fill-green  { background: linear-gradient(90deg, var(--dark-green), var(--green)); }
-  .fill-yellow { background: linear-gradient(90deg, #b08000, var(--yellow)); }
-  .progress-note {
-    font-size: 13px; font-weight: 700;
-    color: var(--text); margin-top: 6px;
-    font-family: 'JetBrains Mono', monospace;
-  }
-  .progress-note span { color: var(--green); }
+/* PROGRESS */
+.progress-row { margin-bottom: 20px; }
+.progress-header {
+display: flex; justify-content: space-between;
+margin-bottom: 8px; align-items: center;
+}
+.prog-label {
+font-size: 12px; font-weight: 700;
+color: #fff; text-transform: uppercase;
+letter-spacing: 1px;
+}
+.prog-value {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 14px; color: var(–yellow); font-weight: 700;
+}
+.progress-bar {
+background: #111; border-radius: 6px;
+height: 12px; overflow: hidden;
+border: 1px solid var(–border);
+}
+.progress-fill { height: 100%; border-radius: 6px; transition: width 0.5s ease; }
+.fill-green  { background: linear-gradient(90deg, var(–dark-green), var(–green)); }
+.fill-yellow { background: linear-gradient(90deg, #b08000, var(–yellow)); }
+.progress-note {
+font-size: 13px; font-weight: 700;
+color: var(–text); margin-top: 6px;
+font-family: ‘JetBrains Mono’, monospace;
+}
+.progress-note span { color: var(–green); }
 
-  /* OBJECTIVE EDIT */
-  .objective-edit { display: flex; align-items: center; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
-  .obj-label { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
-  .obj-input {
-    background: var(--dark); border: 1px solid var(--border);
-    border-radius: 4px; color: var(--text);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 14px; padding: 6px 10px; width: 100px;
-  }
-  .obj-input:focus { border-color: var(--green); outline: none; }
+/* OBJECTIVE EDIT */
+.objective-edit { display: flex; align-items: center; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.obj-label { font-size: 12px; font-weight: 700; color: var(–muted); text-transform: uppercase; letter-spacing: 1px; }
+.obj-input {
+background: var(–dark); border: 1px solid var(–border);
+border-radius: 4px; color: var(–text);
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 14px; padding: 6px 10px; width: 100px;
+}
+.obj-input:focus { border-color: var(–green); outline: none; }
 
-  /* PLAN */
-  .plan-row {
-    display: flex; align-items: center; padding: 11px 0;
-    border-bottom: 1px solid var(--border);
-    font-family: 'JetBrains Mono', monospace; font-size: 13px;
-  }
-  .plan-row:last-child { border-bottom: none; }
-  .plan-stake { width: 70px; font-weight: 700; }
-  .plan-buyins { flex: 1; color: var(--muted); font-size: 12px; }
-  .plan-target { color: var(--text); font-weight: 700; }
-  .plan-active .plan-stake { color: var(--green); }
-  .plan-active .plan-target { color: var(--green); }
-  .plan-active .plan-buyins { color: var(--yellow); font-weight: 700; }
-  .plan-done { opacity: 0.3; }
+/* PLAN */
+.plan-row {
+display: flex; align-items: center; padding: 11px 0;
+border-bottom: 1px solid var(–border);
+font-family: ‘JetBrains Mono’, monospace; font-size: 13px;
+}
+.plan-row:last-child { border-bottom: none; }
+.plan-stake { width: 70px; font-weight: 700; }
+.plan-buyins { flex: 1; color: var(–muted); font-size: 12px; }
+.plan-target { color: var(–text); font-weight: 700; }
+.plan-active .plan-stake { color: var(–green); }
+.plan-active .plan-target { color: var(–green); }
+.plan-active .plan-buyins { color: var(–yellow); font-weight: 700; }
+.plan-done { opacity: 0.3; }
 
-  /* STAKE CHANGE */
-  .stake-change {
-    display: flex; align-items: center; gap: 10px;
-    padding-top: 14px; flex-wrap: wrap;
-  }
-  .stake-label { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+/* STAKE CHANGE */
+.stake-change {
+display: flex; align-items: center; gap: 10px;
+padding-top: 14px; flex-wrap: wrap;
+}
+.stake-label { font-size: 12px; font-weight: 700; color: var(–muted); text-transform: uppercase; letter-spacing: 1px; }
 
-  /* BUTTONS */
-  .btn-sm {
-    background: var(--green); border: none; border-radius: 4px;
-    color: white; cursor: pointer; font-size: 12px; font-weight: 700;
-    padding: 7px 16px; transition: background 0.2s;
-    font-family: 'Roboto', sans-serif;
-  }
-  .btn-sm:hover { background: var(--dark-green); }
-  .btn-cancel {
-    background: none; border: 1px solid var(--red); border-radius: 4px;
-    color: var(--red); cursor: pointer; font-size: 12px; font-weight: 700;
-    padding: 7px 16px; transition: all 0.2s; font-family: 'Roboto', sans-serif;
-  }
-  .btn-cancel:hover { background: var(--red); color: white; }
-  .btn-primary {
-    width: 100%; padding: 14px;
-    background: var(--green); border: none; border-radius: 6px;
-    color: white; font-size: 14px; font-weight: 700;
-    cursor: pointer; font-family: 'Roboto', sans-serif;
-    transition: background 0.2s; letter-spacing: 1px; text-transform: uppercase;
-  }
-  .btn-primary:hover { background: var(--dark-green); }
+/* BUTTONS */
+.btn-sm {
+background: var(–green); border: none; border-radius: 4px;
+color: white; cursor: pointer; font-size: 12px; font-weight: 700;
+padding: 7px 16px; transition: background 0.2s;
+font-family: ‘Roboto’, sans-serif;
+}
+.btn-sm:hover { background: var(–dark-green); }
+.btn-cancel {
+background: none; border: 1px solid var(–red); border-radius: 4px;
+color: var(–red); cursor: pointer; font-size: 12px; font-weight: 700;
+padding: 7px 16px; transition: all 0.2s; font-family: ‘Roboto’, sans-serif;
+}
+.btn-cancel:hover { background: var(–red); color: white; }
+.btn-primary {
+width: 100%; padding: 14px;
+background: var(–green); border: none; border-radius: 6px;
+color: white; font-size: 14px; font-weight: 700;
+cursor: pointer; font-family: ‘Roboto’, sans-serif;
+transition: background 0.2s; letter-spacing: 1px; text-transform: uppercase;
+}
+.btn-primary:hover { background: var(–dark-green); }
 
-  /* FORM */
-  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-  .form-group { display: flex; flex-direction: column; gap: 6px; }
-  .form-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #fff; text-transform: uppercase; }
-  .form-input, .form-select {
-    width: 100%; padding: 10px 14px;
-    background: var(--dark); border: 1px solid var(--border);
-    border-radius: 6px; color: var(--text);
-    font-size: 15px; font-family: 'Roboto', sans-serif;
-    outline: none; transition: border-color 0.2s;
-  }
-  .form-input:focus, .form-select:focus { border-color: var(--green); }
-  .form-select option { background: var(--dark); }
+/* FORM */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #fff; text-transform: uppercase; }
+.form-input, .form-select {
+width: 100%; padding: 10px 14px;
+background: var(–dark); border: 1px solid var(–border);
+border-radius: 6px; color: var(–text);
+font-size: 15px; font-family: ‘Roboto’, sans-serif;
+outline: none; transition: border-color 0.2s;
+}
+.form-input:focus, .form-select:focus { border-color: var(–green); }
+.form-select option { background: var(–dark); }
 
-  /* PREVIEW */
-  .preview {
-    border-radius: 6px; padding: 14px; margin-bottom: 16px;
-    font-family: 'JetBrains Mono', monospace; display: none;
-  }
-  .preview.show { display: block; }
-  .preview.pos { background: #0a1a0a; border: 1px solid var(--green); }
-  .preview.neg { background: #1a0a0a; border: 1px solid var(--red); }
-  .preview-result   { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
-  .preview-bankroll { font-size: 12px; color: var(--muted); }
-  .preview-bb100    { font-size: 12px; color: var(--muted); margin-top: 2px; }
+/* PREVIEW */
+.preview {
+border-radius: 6px; padding: 14px; margin-bottom: 16px;
+font-family: ‘JetBrains Mono’, monospace; display: none;
+}
+.preview.show { display: block; }
+.preview.pos { background: #0a1a0a; border: 1px solid var(–green); }
+.preview.neg { background: #1a0a0a; border: 1px solid var(–red); }
+.preview-result   { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+.preview-bankroll { font-size: 12px; color: var(–muted); }
+.preview-bb100    { font-size: 12px; color: var(–muted); margin-top: 2px; }
 
-  /* LAST SESSION */
-  .last-session {
-    margin-top: 16px; border-radius: 6px; padding: 16px;
-    display: none; border-left: 4px solid var(--green);
-    background: var(--dark);
-  }
-  .last-session.show { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-  .last-session.neg { border-left-color: var(--red); }
-  .ls-result { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; min-width: 90px; }
-  .ls-info { flex: 1; font-size: 13px; color: var(--muted); font-family: 'JetBrains Mono', monospace; line-height: 1.8; }
+/* LAST SESSION */
+.last-session {
+margin-top: 16px; border-radius: 6px; padding: 16px;
+display: none; border-left: 4px solid var(–green);
+background: var(–dark);
+}
+.last-session.show { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.last-session.neg { border-left-color: var(–red); }
+.ls-result { font-family: ‘JetBrains Mono’, monospace; font-size: 22px; font-weight: 700; min-width: 90px; }
+.ls-info { flex: 1; font-size: 13px; color: var(–muted); font-family: ‘JetBrains Mono’, monospace; line-height: 1.8; }
 
-  /* SESSION TABLE */
-  .session-table { width: 100%; border-collapse: collapse; }
-  .session-table th {
-    text-align: left; padding: 10px 12px;
-    font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
-    color: #fff; border-bottom: 2px solid var(--border);
-    font-weight: 700;
-  }
-  .session-table td {
-    padding: 11px 12px; border-bottom: 1px solid var(--border);
-    font-family: 'JetBrains Mono', monospace; font-size: 13px;
-  }
-  .session-table tr:hover td { background: rgba(0,166,81,0.04); }
-  .session-table tr:last-child td { border-bottom: none; }
-  .td-result { font-weight: 500; }
-  .td-stake  { color: var(--yellow); font-weight: 700; }
-  .td-del { cursor: pointer; color: #333; transition: color 0.2s; background: none; border: none; font-size: 18px; padding: 0 4px; }
-  .td-del:hover { color: var(--red); }
+/* SESSION TABLE */
+.session-table { width: 100%; border-collapse: collapse; }
+.session-table th {
+text-align: left; padding: 10px 12px;
+font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+color: #fff; border-bottom: 2px solid var(–border);
+font-weight: 700;
+}
+.session-table td {
+padding: 11px 12px; border-bottom: 1px solid var(–border);
+font-family: ‘JetBrains Mono’, monospace; font-size: 13px;
+}
+.session-table tr:hover td { background: rgba(0,166,81,0.04); }
+.session-table tr:last-child td { border-bottom: none; }
+.td-result { font-weight: 500; }
+.td-stake  { color: var(–yellow); font-weight: 700; }
+.td-del { cursor: pointer; color: #333; transition: color 0.2s; background: none; border: none; font-size: 18px; padding: 0 4px; }
+.td-del:hover { color: var(–red); }
 
-  /* ANNUAL */
-  .annual-row {
-    display: flex; align-items: center; padding: 13px 0;
-    border-bottom: 1px solid var(--border);
-    font-family: 'JetBrains Mono', monospace;
-  }
-  .annual-row:last-child { border-bottom: none; }
-  .annual-month { width: 130px; font-size: 14px; font-weight: 700; color: var(--text); }
-  .annual-profit { width: 100px; font-size: 14px; font-weight: 700; }
-  .annual-sessions { flex: 1; font-size: 12px; color: var(--muted); }
-  .annual-bk { font-size: 13px; color: var(--muted); }
+/* ANNUAL */
+.annual-row {
+display: flex; align-items: center; padding: 13px 0;
+border-bottom: 1px solid var(–border);
+font-family: ‘JetBrains Mono’, monospace;
+}
+.annual-row:last-child { border-bottom: none; }
+.annual-month { width: 130px; font-size: 14px; font-weight: 700; color: var(–text); }
+.annual-profit { width: 100px; font-size: 14px; font-weight: 700; }
+.annual-sessions { flex: 1; font-size: 12px; color: var(–muted); }
+.annual-bk { font-size: 13px; color: var(–muted); }
 
-  .empty-state { text-align: center; color: #444; padding: 40px; font-size: 13px; font-family: 'JetBrains Mono', monospace; }
-  .divider { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
+.empty-state { text-align: center; color: #444; padding: 40px; font-size: 13px; font-family: ‘JetBrains Mono’, monospace; }
+.divider { border: none; border-top: 1px solid var(–border); margin: 14px 0; }
 </style>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL =  + SUPABASE_URL + ;
+const SUPABASE_KEY =  + SUPABASE_KEY + ;
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+</script>
+
 </head>
 <body>
 
@@ -359,6 +369,15 @@
 </script>
 
 <!-- HEADER -->
+
+<div id="loading-overlay" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#141414;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999">
+  <div style="font-size:48px;margin-bottom:16px">♠</div>
+  <div style="font-size:18px;font-weight:700;color:#f0f0f0;letter-spacing:2px">VALUKAS BANKROLL</div>
+  <div style="font-size:13px;color:#666;margin-top:12px;font-family:'JetBrains Mono',monospace">Chargement des données...</div>
+  <div style="width:200px;height:3px;background:#2a2a2a;border-radius:3px;margin-top:20px;overflow:hidden">
+    <div id="loading-bar" style="height:100%;width:0%;background:var(--green);border-radius:3px;transition:width 0.3s"></div>
+  </div>
+</div>
 <div class="header">
   <div class="logo-wrap">
     <div class="logo-icon">♠</div>
@@ -371,6 +390,7 @@
 </div>
 
 <!-- MONTH NAV -->
+
 <div class="month-nav">
   <button class="month-btn" onclick="prevMonth()">&#8592;</button>
   <div class="month-label" id="month-label">Mai 2026</div>
@@ -378,6 +398,7 @@
 </div>
 
 <!-- TABS -->
+
 <div class="tabs">
   <button class="tab active" onclick="switchTab('dashboard',this)">Dashboard</button>
   <button class="tab" onclick="switchTab('session',this)">Session</button>
@@ -388,90 +409,96 @@
 </div>
 
 <!-- CONTENT -->
+
 <div class="content">
 
   <!-- DASHBOARD -->
+
   <div id="panel-dashboard" class="panel active">
 
-    <div class="card" style="margin-bottom:12px;padding:14px 20px">
-      <div style="display:flex;align-items:center;gap:12px">
-        <span style="font-size:11px;font-weight:700;letter-spacing:2px;color:#fff;text-transform:uppercase;white-space:nowrap">Filtre Stake</span>
-        <select id="stat-filter" onchange="updateAll()" style="flex:1;padding:8px 14px;background:var(--dark);border:1px solid var(--border);border-radius:6px;color:#fff;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;outline:none;cursor:pointer;transition:border-color 0.2s" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--border)'">
-          <option value="all">Tous stakes confondus</option>
-          <option value="NL5">NL5</option>
-          <option value="NL10">NL10</option>
-          <option value="NL20">NL20</option>
-          <option value="NL50">NL50</option>
-          <option value="NL100">NL100</option>
-        </select>
-      </div>
-    </div>
-    <div class="stats-grid">
-      <div class="stat-box"><div class="stat-label">BK Début Mois</div><div class="stat-value muted" id="stat-start">—</div></div>
-      <div class="stat-box"><div class="stat-label">Profit Mois</div><div class="stat-value" id="stat-profit">—</div></div>
-      <div class="stat-box"><div class="stat-label">Sessions</div><div class="stat-value muted" id="stat-sessions">—</div></div>
-      <div class="stat-box"><div class="stat-label">bb/100</div><div class="stat-value" id="stat-bb100">—</div></div>
-      <div class="stat-box"><div class="stat-label">Heures Jouées</div><div class="stat-value muted" id="stat-hours">—</div></div>
-      <div class="stat-box"><div class="stat-label">Mains Jouées</div><div class="stat-value muted" id="stat-hands">—</div></div>
-      <div class="stat-box"><div class="stat-label">Meilleure Session</div><div class="stat-value green" id="stat-best">—</div></div>
-      <div class="stat-box"><div class="stat-label">Pire Session</div><div class="stat-value red" id="stat-worst">—</div></div>
-    </div>
+```
+<div class="card" style="margin-bottom:12px;padding:14px 20px">
+  <div style="display:flex;align-items:center;gap:12px">
+    <span style="font-size:11px;font-weight:700;letter-spacing:2px;color:#fff;text-transform:uppercase;white-space:nowrap">Filtre Stake</span>
+    <select id="stat-filter" onchange="updateAll()" style="flex:1;padding:8px 14px;background:var(--dark);border:1px solid var(--border);border-radius:6px;color:#fff;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;outline:none;cursor:pointer;transition:border-color 0.2s" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--border)'">
+      <option value="all">Tous stakes confondus</option>
+      <option value="NL5">NL5</option>
+      <option value="NL10">NL10</option>
+      <option value="NL20">NL20</option>
+      <option value="NL50">NL50</option>
+      <option value="NL100">NL100</option>
+    </select>
+  </div>
+</div>
+<div class="stats-grid">
+  <div class="stat-box"><div class="stat-label">BK Début Mois</div><div class="stat-value muted" id="stat-start">—</div></div>
+  <div class="stat-box"><div class="stat-label">Profit Mois</div><div class="stat-value" id="stat-profit">—</div></div>
+  <div class="stat-box"><div class="stat-label">Sessions</div><div class="stat-value muted" id="stat-sessions">—</div></div>
+  <div class="stat-box"><div class="stat-label">bb/100</div><div class="stat-value" id="stat-bb100">—</div></div>
+  <div class="stat-box"><div class="stat-label">Heures Jouées</div><div class="stat-value muted" id="stat-hours">—</div></div>
+  <div class="stat-box"><div class="stat-label">Mains Jouées</div><div class="stat-value muted" id="stat-hands">—</div></div>
+  <div class="stat-box"><div class="stat-label">Meilleure Session</div><div class="stat-value green" id="stat-best">—</div></div>
+  <div class="stat-box"><div class="stat-label">Pire Session</div><div class="stat-value red" id="stat-worst">—</div></div>
+</div>
 
-    <!-- Objectif -->
-    <div class="card">
-      <div class="card-title">Objectif Bankroll</div>
-      <div class="progress-row">
-        <div class="progress-header">
-          <span class="prog-label">Cible</span>
-          <span class="prog-value" id="prog-goal-text">—</span>
-        </div>
-        <div class="progress-bar"><div class="progress-fill fill-yellow" id="prog-goal-bar" style="width:0%"></div></div>
-        <div class="progress-note" id="prog-goal-note">—</div>
-      </div>
-      <div class="objective-edit">
-        <span class="obj-label">Modifier :</span>
-        <input type="number" id="obj-input" class="obj-input" placeholder="250">
-        <button class="btn-sm" onclick="updateGoal()">Appliquer</button>
-      </div>
+<!-- Objectif -->
+<div class="card">
+  <div class="card-title">Objectif Bankroll</div>
+  <div class="progress-row">
+    <div class="progress-header">
+      <span class="prog-label">Cible</span>
+      <span class="prog-value" id="prog-goal-text">—</span>
     </div>
+    <div class="progress-bar"><div class="progress-fill fill-yellow" id="prog-goal-bar" style="width:0%"></div></div>
+    <div class="progress-note" id="prog-goal-note">—</div>
+  </div>
+  <div class="objective-edit">
+    <span class="obj-label">Modifier :</span>
+    <input type="number" id="obj-input" class="obj-input" placeholder="250">
+    <button class="btn-sm" onclick="updateGoal()">Appliquer</button>
+  </div>
+</div>
 
-    <!-- Progression NL10 -->
-    <div class="card">
-      <div class="card-title">Progression vers NL10</div>
-      <div class="progress-row">
-        <div class="progress-header">
-          <span class="prog-label">NL10 requis</span>
-          <span class="prog-value" id="prog-nl10-text">—</span>
-        </div>
-        <div class="progress-bar"><div class="progress-fill fill-green" id="prog-nl10-bar" style="width:0%"></div></div>
-        <div class="progress-note" id="prog-nl10-note">—</div>
-      </div>
-      <div class="divider"></div>
-      <div class="stake-change">
-        <span class="stake-label">Stake actuel :</span>
-        <select id="stake-select" class="form-select" style="width:auto;padding:7px 12px;font-size:13px">
-          <option value="NL5">NL5</option>
-          <option value="NL10">NL10</option>
-          <option value="NL20">NL20</option>
-          <option value="NL50">NL50</option>
-          <option value="NL100">NL100</option>
-        </select>
-        <button class="btn-sm" onclick="updateStake()">Appliquer</button>
-      </div>
+<!-- Progression NL10 -->
+<div class="card">
+  <div class="card-title">Progression vers NL10</div>
+  <div class="progress-row">
+    <div class="progress-header">
+      <span class="prog-label">NL10 requis</span>
+      <span class="prog-value" id="prog-nl10-text">—</span>
     </div>
+    <div class="progress-bar"><div class="progress-fill fill-green" id="prog-nl10-bar" style="width:0%"></div></div>
+    <div class="progress-note" id="prog-nl10-note">—</div>
+  </div>
+  <div class="divider"></div>
+  <div class="stake-change">
+    <span class="stake-label">Stake actuel :</span>
+    <select id="stake-select" class="form-select" style="width:auto;padding:7px 12px;font-size:13px">
+      <option value="NL5">NL5</option>
+      <option value="NL10">NL10</option>
+      <option value="NL20">NL20</option>
+      <option value="NL50">NL50</option>
+      <option value="NL100">NL100</option>
+    </select>
+    <button class="btn-sm" onclick="updateStake()">Appliquer</button>
+  </div>
+</div>
 
-    <!-- Plan -->
-    <div class="card">
-      <div class="card-title">Plan de Progression</div>
-      <div class="plan-row" id="plan-nl5"><div class="plan-stake">NL5</div><div class="plan-buyins">30 buy-ins</div><div class="plan-target">150€</div></div>
-      <div class="plan-row" id="plan-nl10"><div class="plan-stake">NL10</div><div class="plan-buyins">40 buy-ins</div><div class="plan-target">400€</div></div>
-      <div class="plan-row" id="plan-nl20"><div class="plan-stake">NL20</div><div class="plan-buyins">45 buy-ins · extraction live 20-30%</div><div class="plan-target">900€</div></div>
-      <div class="plan-row" id="plan-nl50"><div class="plan-stake">NL50</div><div class="plan-buyins">75 buy-ins</div><div class="plan-target">3 750€</div></div>
-      <div class="plan-row" id="plan-nl100"><div class="plan-stake">NL100</div><div class="plan-buyins">100 buy-ins</div><div class="plan-target">10 000€</div></div>
-    </div>
+<!-- Plan -->
+<div class="card">
+  <div class="card-title">Plan de Progression</div>
+  <div class="plan-row" id="plan-nl5"><div class="plan-stake">NL5</div><div class="plan-buyins">30 buy-ins</div><div class="plan-target">150€</div></div>
+  <div class="plan-row" id="plan-nl10"><div class="plan-stake">NL10</div><div class="plan-buyins">40 buy-ins</div><div class="plan-target">400€</div></div>
+  <div class="plan-row" id="plan-nl20"><div class="plan-stake">NL20</div><div class="plan-buyins">45 buy-ins · extraction live 20-30%</div><div class="plan-target">900€</div></div>
+  <div class="plan-row" id="plan-nl50"><div class="plan-stake">NL50</div><div class="plan-buyins">75 buy-ins</div><div class="plan-target">3 750€</div></div>
+  <div class="plan-row" id="plan-nl100"><div class="plan-stake">NL100</div><div class="plan-buyins">100 buy-ins</div><div class="plan-target">10 000€</div></div>
+</div>
+```
+
   </div>
 
   <!-- SESSION -->
+
   <div id="panel-session" class="panel">
     <div class="card">
       <div class="card-title">Ajouter une Session</div>
@@ -491,27 +518,31 @@
         </div>
       </div>
 
-      <div class="preview" id="preview">
-        <div class="preview-result" id="preview-result"></div>
-        <div class="preview-bankroll" id="preview-bankroll"></div>
-        <div class="preview-bb100" id="preview-bb100"></div>
-      </div>
+```
+  <div class="preview" id="preview">
+    <div class="preview-result" id="preview-result"></div>
+    <div class="preview-bankroll" id="preview-bankroll"></div>
+    <div class="preview-bb100" id="preview-bb100"></div>
+  </div>
 
-      <div id="form-error" style="display:none;color:var(--red);font-size:13px;font-weight:700;margin-bottom:12px;padding:10px;background:#1a0a0a;border:1px solid var(--red);border-radius:6px;">
-        ⚠ Résultat et durée sont obligatoires.
-      </div>
-      <button class="btn-primary" onclick="addSession()">Valider la session</button>
+  <div id="form-error" style="display:none;color:var(--red);font-size:13px;font-weight:700;margin-bottom:12px;padding:10px;background:#1a0a0a;border:1px solid var(--red);border-radius:6px;">
+    ⚠ Résultat et durée sont obligatoires.
+  </div>
+  <button class="btn-primary" onclick="addSession()">Valider la session</button>
 
-      <!-- Last session -->
-      <div class="last-session" id="last-session">
-        <div class="ls-result" id="ls-result"></div>
-        <div class="ls-info" id="ls-info"></div>
-        <button class="btn-cancel" onclick="cancelLastSession()">Annuler</button>
-      </div>
-    </div>
+  <!-- Last session -->
+  <div class="last-session" id="last-session">
+    <div class="ls-result" id="ls-result"></div>
+    <div class="ls-info" id="ls-info"></div>
+    <button class="btn-cancel" onclick="cancelLastSession()">Annuler</button>
+  </div>
+</div>
+```
+
   </div>
 
   <!-- HISTORIQUE -->
+
   <div id="panel-historique" class="panel">
     <div class="card">
       <div class="card-title" id="hist-title">Historique</div>
@@ -536,6 +567,7 @@
   </div>
 
   <!-- PAR STAKE -->
+
   <div id="panel-stakes" class="panel">
     <div class="card">
       <div class="card-title">Résultats par Stake — Tous mois</div>
@@ -559,6 +591,7 @@
   </div>
 
   <!-- COURBES -->
+
   <div id="panel-curves" class="panel">
     <div class="card" style="margin-bottom:16px;padding:14px 20px">
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
@@ -588,6 +621,7 @@
   </div>
 
   <!-- ANNUEL -->
+
   <div id="panel-annual" class="panel">
     <div class="card">
       <div class="card-title">Historique 2026</div>
@@ -1099,7 +1133,158 @@ function switchTab(name, el) {
   if (name === 'curves') renderCurves();
 }
 
-updateAll();
+
+// ============================================================
+// SUPABASE
+// ============================================================
+const _SB = window.supabase.createClient('https://hngctoanrsdmumldqosd.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhuZ2N0b2FucnNkbXVtbGRxb3NkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNjExNzIsImV4cCI6MjA5MzgzNzE3Mn0.YyxBlWp6pPmp9LiGLsHBPqbCHs8JxZSW3NLMmOQIMtg');
+
+async function loadFromSupabase() {
+  try {
+    document.getElementById('loading-bar').style.width = '30%';
+    const { data: cfg } = await _SB.from('config').select('data').eq('id', 1).single();
+    document.getElementById('loading-bar').style.width = '60%';
+    if (cfg && cfg.data && cfg.data.months) DB = cfg.data;
+    const { data: rows } = await _SB.from('sessions').select('*').order('created_at', { ascending: true });
+    document.getElementById('loading-bar').style.width = '85%';
+    if (rows && rows.length > 0) {
+      Object.keys(DB.months).forEach(k => DB.months[k].sessions = []);
+      rows.forEach(row => {
+        if (!DB.months[row.month_key]) {
+          DB.months[row.month_key] = { bankrollStart: 90.79, bankrollCurrent: 90.79, stake: 'NL5', sessions: [] };
+        }
+        DB.months[row.month_key].sessions.push({
+          id: row.id, date: row.date, stake: row.stake,
+          duration: row.duration, tables: row.tables,
+          hands: row.hands || 0, result: parseFloat(row.result),
+          bankrollAfter: parseFloat(row.bankroll_after)
+        });
+      });
+      Object.keys(DB.months).forEach(key => {
+        const mo = DB.months[key];
+        if (mo.sessions.length > 0) mo.bankrollCurrent = mo.sessions[mo.sessions.length - 1].bankrollAfter;
+      });
+    }
+    document.getElementById('loading-bar').style.width = '100%';
+    setTimeout(() => { document.getElementById('loading-overlay').style.display = 'none'; updateAll(); }, 300);
+  } catch(err) {
+    console.error(err);
+    document.getElementById('loading-overlay').style.display = 'none';
+    updateAll();
+  }
+}
+
+async function saveConfig() {
+  try { await _SB.from('config').upsert({ id: 1, data: DB, updated_at: new Date().toISOString() }); } catch(e) {}
+}
+
+async function saveSession(session, monthKey) {
+  try {
+    await _SB.from('sessions').upsert({
+      id: session.id, month_key: monthKey, date: session.date,
+      stake: session.stake, duration: session.duration, tables: session.tables,
+      hands: session.hands || 0, result: session.result, bankroll_after: session.bankrollAfter
+    });
+  } catch(e) {}
+}
+
+async function deleteSessionDB(id) {
+  try { await _SB.from('sessions').delete().eq('id', id); } catch(e) {}
+}
+
+async function addSession() {
+  const result = parseFloat(document.getElementById('f-result').value);
+  const duration = document.getElementById('f-duration').value.trim();
+  if (isNaN(result) || !duration) {
+    const err = document.getElementById('form-error');
+    if (err) { err.style.display = 'block'; setTimeout(() => err.style.display = 'none', 3000); }
+    return;
+  }
+  const stake = document.getElementById('f-stake').value;
+  const mo = curMonth();
+  const session = {
+    id: Date.now(), date: document.getElementById('f-date').value,
+    stake, duration, tables: parseInt(document.getElementById('f-tables').value),
+    hands: parseInt(document.getElementById('f-hands').value) || 0,
+    result, bankrollAfter: mo.bankrollCurrent + result,
+  };
+  mo.sessions.unshift(session);
+  mo.bankrollCurrent += result;
+  lastSessionId = session.id;
+  const ls = document.getElementById('last-session');
+  ls.className = 'last-session show ' + (result < 0 ? 'neg' : '');
+  document.getElementById('ls-result').textContent = fEuro(result);
+  document.getElementById('ls-result').className = 'ls-result ' + fClass(result);
+  const bb100 = calcBB100(result, session.hands, stake);
+  document.getElementById('ls-info').innerHTML =
+    session.date + ' · ' + stake + ' · ' + duration + ' · ' + (session.hands > 0 ? session.hands + ' mains' : '—') +
+    (bb100 !== null ? ' · bb/100 : ' + (bb100 >= 0 ? '+' : '') + bb100.toFixed(1) : '') +
+    '<br>BK après : ' + session.bankrollAfter.toFixed(2) + '€';
+  document.getElementById('f-result').value = '';
+  document.getElementById('f-duration').value = '';
+  document.getElementById('f-hands').value = '';
+  document.getElementById('f-date').value = new Date().toISOString().split('T')[0];
+  document.getElementById('preview').classList.remove('show');
+  await saveSession(session, DB.currentMonth);
+  await saveConfig();
+  updateAll();
+  switchTab('dashboard', document.querySelectorAll('.tab')[0]);
+}
+
+async function deleteSession(id, result) {
+  if (!confirm('Supprimer cette session ?')) return;
+  const mo = curMonth();
+  mo.sessions = mo.sessions.filter(s => s.id !== id);
+  mo.bankrollCurrent -= result;
+  if (id === lastSessionId) { lastSessionId = null; document.getElementById('last-session').classList.remove('show'); }
+  await deleteSessionDB(id);
+  await saveConfig();
+  updateAll(); renderHistory();
+}
+
+async function cancelLastSession() {
+  if (!lastSessionId) return;
+  const mo = curMonth();
+  const s = mo.sessions.find(x => x.id === lastSessionId);
+  if (!s) return;
+  mo.sessions = mo.sessions.filter(x => x.id !== lastSessionId);
+  mo.bankrollCurrent -= s.result;
+  await deleteSessionDB(lastSessionId);
+  await saveConfig();
+  lastSessionId = null;
+  document.getElementById('last-session').classList.remove('show');
+  updateAll();
+}
+
+async function updateGoal() {
+  const val = parseFloat(document.getElementById('obj-input').value);
+  if (isNaN(val) || val <= 0) return;
+  DB.goalShort = val;
+  document.getElementById('obj-input').value = '';
+  await saveConfig();
+  updateAll();
+}
+
+async function updateStake() {
+  curMonth().stake = document.getElementById('stake-select').value;
+  await saveConfig();
+  updateAll();
+}
+
+async function createNextMonth() {
+  const [y, m] = DB.currentMonth.split('-').map(Number);
+  const next = m === 12 ? (y+1) + '-01' : y + '-' + String(m+1).padStart(2,'0');
+  if (DB.months[next]) return;
+  const br = curMonth().bankrollCurrent;
+  DB.months[next] = { bankrollStart: br, bankrollCurrent: br, stake: curMonth().stake || 'NL5', sessions: [] };
+  DB.currentMonth = next;
+  await saveConfig();
+  updateAll();
+  switchTab('dashboard', document.querySelectorAll('.tab')[0]);
+}
+
+loadFromSupabase();
 </script>
+
 </body>
 </html>
